@@ -3,17 +3,27 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import { FaRegLightbulb } from "react-icons/fa"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Testimonials = () => {
+  const data = useStaticQuery(query)
+  const testimonials = data.allFile.nodes
+
   return (
     <TestimonialsContainer>
       <TopLine>Testimonials</TopLine>
-      <Description></Description>
+      <Description>What People are Saying</Description>
       <ContentWrapper>
         <ColumnOne>
           <Testimonial>
-            <IoMdCheckmarkCircleOutline />
-            <h3>Sean Michaels</h3>
+            <IoMdCheckmarkCircleOutline
+              css={`
+                color: #3fffa8;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+              `}
+            />
+            <h3>Anna Becker</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Accusamus labore natus reprehenderit perspiciatis facilis in odit
@@ -22,7 +32,13 @@ const Testimonials = () => {
             </p>
           </Testimonial>
           <Testimonial>
-            <FaRegLightbulb />
+            <FaRegLightbulb
+              css={`
+                color: #f9b19b;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+              `}
+            />
             <h3>Sarah Kin</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -33,12 +49,32 @@ const Testimonials = () => {
           </Testimonial>
         </ColumnOne>
         <ColumnTwo>
-          <Images />
+          {testimonials.map((image, index) => {
+            const pathToImage = getImage(image)
+            return <Images image={pathToImage} key={index} />
+          })}
         </ColumnTwo>
       </ContentWrapper>
     </TestimonialsContainer>
   )
 }
+
+const query = graphql`
+  query TestimonialsQuery {
+    allFile(
+      filter: {
+        ext: { regex: "/(jpg)|(png)|(jpeg)/" }
+        name: { in: ["testimonial-1", "testimonial-2"] }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
+      }
+    }
+  }
+`
 
 export default Testimonials
 
@@ -75,7 +111,7 @@ const ContentWrapper = styled.div`
 `
 const ColumnOne = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 `
 
 const Testimonial = styled.div`
