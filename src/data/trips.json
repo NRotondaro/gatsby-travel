@@ -1,26 +1,26 @@
 [
   {
     "img": "../assets/images/travel-1.jpg",
-    "alt": "Tian tan Buddha",
-    "name": "Tian Tan Buddha",
+    "alt": "Sidney",
+    "name": "Sidney",
     "button": "View Destination"
   },
   {
     "img": "../assets/images/travel-2.jpg",
-    "alt": "Tian tan Buddha",
-    "name": "Tian Tan Buddha",
+    "alt": "Boat",
+    "name": "Boat",
     "button": "View Destination"
   },
   {
     "img": "../assets/images/travel-3.jpg",
-    "alt": "Tian tan Buddha",
-    "name": "Tian Tan Buddha",
+    "alt": "Random Grass Photo",
+    "name": "Random Grass Photo",
     "button": "View Destination"
   },
   {
     "img": "../assets/images/travel-4.jpg",
-    "alt": "Tian tan Buddha",
-    "name": "Tian Tan Buddha",
+    "alt": "Girl above the car",
+    "name": "Girl above the car",
     "button": "View Destination"
   }
 ]

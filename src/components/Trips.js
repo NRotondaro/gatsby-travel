@@ -27,7 +27,7 @@ const Trips = ({ heading }) => {
                 <Button
                   to="/trips"
                   primary="true"
-                  rounded="true"
+                  round="true"
                   css={`
                     position: absolute;
                     top: 420px;
