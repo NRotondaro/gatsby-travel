@@ -1,32 +1,32 @@
-import React from "react"
-import styled from "styled-components"
-import { Button } from "./Button"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react';
+import styled from 'styled-components';
+import { Button } from './Button';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Email = () => {
   return (
     <EmailContainer>
       <StaticImage
         style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
           zIndex: 0,
         }}
-        src="../assets/images/email2.jpg"
-        alt="email image"
+        src='../assets/images/email2.jpg'
+        alt='email image'
       />
       <EmailContent>
         <h1>Get Acess to Exlusive Offers</h1>
         <p>Sign up for our news below to get $100 off your first trip!</p>
-        <form action="#">
-          <FormWrap>
-            <label htmlFor="email">
-              <input type="email" placeholder="Enter your email" id="email" />
+        <form action='#'>
+          <EmailFormWrap>
+            <label htmlFor='email'>
+              <input type='email' placeholder='Enter your email' id='email' />
             </label>
             <Button
-              as="button"
-              type="submit"
+              as='button'
+              type='submit'
               round
               primary
               css={`
@@ -41,18 +41,17 @@ const Email = () => {
                   width: 100%;
                   min-width: 250px;
                 }
-              `}
-            >
+              `}>
               Sign Up
             </Button>
-          </FormWrap>
+          </EmailFormWrap>
         </form>
       </EmailContent>
     </EmailContainer>
-  )
-}
+  );
+};
 
-export default Email
+export default Email;
 
 const EmailContainer = styled.div`
   background: linear-gradient(
@@ -69,7 +68,7 @@ const EmailContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-`
+`;
 
 const EmailContent = styled.div`
   display: flex;
@@ -90,9 +89,9 @@ const EmailContent = styled.div`
     padding: 0 1rem;
     margin-bottom: 2rem;
   }
-`
+`;
 
-const FormWrap = styled.div`
+const EmailFormWrap = styled.div`
   input {
     padding: 1rem 1.5rem;
     outline: none;
@@ -114,4 +113,4 @@ const FormWrap = styled.div`
       margin-right: 0;
     }
   }
-`
+`;

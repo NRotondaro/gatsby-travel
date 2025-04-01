@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import { FaBars } from "react-icons/fa"
-import { menuData } from "../data/MenuData"
-import { Button } from "./Button"
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
+import { menuData } from '../data/MenuData';
+import { Button } from './Button';
 
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">EXPLORIX</NavLink>
+      <NavLink to='/'>EXPLORIX</NavLink>
       <Bars />
       <NavMenu>
         {menuData.map((item, index) => (
@@ -18,13 +18,13 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary="true" round="true" to="/trips">
+        <Button primary='true' round='true' to='/trips'>
           Book a Flight
         </Button>
       </NavBtn>
     </Nav>
-  )
-}
+  );
+};
 
 const Nav = styled.nav`
   background: transparent;
@@ -34,7 +34,7 @@ const Nav = styled.nav`
   padding: 0.5rem calc((100vw - 1300px) / 2);
   z-index: 100;
   position: relative;
-`
+`;
 
 const NavLink = styled(Link)`
   color: #fff;
@@ -44,7 +44,7 @@ const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-`
+`;
 
 const Bars = styled(FaBars)`
   display: none;
@@ -59,7 +59,7 @@ const Bars = styled(FaBars)`
     font-size: 1.8rem;
     cursor: pointer;
   }
-`
+`;
 
 const NavMenu = styled.div`
   display: flex;
@@ -69,7 +69,7 @@ const NavMenu = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 const NavBtn = styled.div`
   display: flex;
@@ -79,6 +79,6 @@ const NavBtn = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
-export default Header
+export default Header;

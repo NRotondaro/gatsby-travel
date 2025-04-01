@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 const Footer = () => {
   return (
@@ -12,33 +12,33 @@ const Footer = () => {
         </FooterDesc>
         <FooterLinkItems>
           <FooterLinkTitle>Contact Us</FooterLinkTitle>
-          <FooterLink to="/about">Contact</FooterLink>
-          <FooterLink to="/">Support</FooterLink>
-          <FooterLink to="/">Destinations</FooterLink>
-          <FooterLink to="/">Sponsorships</FooterLink>
+          <FooterLink to='/about'>Contact</FooterLink>
+          <FooterLink to='/'>Support</FooterLink>
+          <FooterLink to='/'>Destinations</FooterLink>
+          <FooterLink to='/'>Sponsorships</FooterLink>
         </FooterLinkItems>
       </FooterLinksWrapper>
       <FooterLinksWrapper>
         <FooterLinkItems>
           <FooterLinkTitle>Videos</FooterLinkTitle>
-          <FooterLink to="/about">Submit Video</FooterLink>
-          <FooterLink to="/">Ambassadors</FooterLink>
-          <FooterLink to="/">Agency</FooterLink>
-          <FooterLink to="/">Influencer</FooterLink>
+          <FooterLink to='/about'>Submit Video</FooterLink>
+          <FooterLink to='/'>Ambassadors</FooterLink>
+          <FooterLink to='/'>Agency</FooterLink>
+          <FooterLink to='/'>Influencer</FooterLink>
         </FooterLinkItems>
         <FooterLinkItems>
           <FooterLinkTitle>Social Media</FooterLinkTitle>
-          <FooterLink to="/about">Instagram</FooterLink>
-          <FooterLink to="/">Facebook</FooterLink>
-          <FooterLink to="/">YouTube</FooterLink>
-          <FooterLink to="/">Twitter</FooterLink>
+          <FooterLink to='/about'>Instagram</FooterLink>
+          <FooterLink to='/'>Facebook</FooterLink>
+          <FooterLink to='/'>YouTube</FooterLink>
+          <FooterLink to='/'>Twitter</FooterLink>
         </FooterLinkItems>
       </FooterLinksWrapper>
     </FooterContainer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
 const FooterContainer = styled.div`
   padding: 5rem calc((100vw - 1100px) / 2);
@@ -46,7 +46,7 @@ const FooterContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   color: #000;
   background: #fafafb;
-`
+`;
 
 const FooterDesc = styled.div`
   padding: 0 2rem;
@@ -59,7 +59,7 @@ const FooterDesc = styled.div`
   @media screen and (max-width: 400px) {
     padding: 1rem;
   }
-`
+`;
 const FooterLinksWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -67,7 +67,7 @@ const FooterLinksWrapper = styled.div`
   @media screen and (max-width: 820px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 const FooterLinkItems = styled.div`
   display: flex;
@@ -78,11 +78,11 @@ const FooterLinkItems = styled.div`
   @media screen and (max-width: 400px) {
     padding: 1rem;
   }
-`
+`;
 const FooterLinkTitle = styled.h2`
   font-size: 14px;
   margin-bottom: 16px;
-`
+`;
 const FooterLink = styled(Link)`
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -93,4 +93,4 @@ const FooterLink = styled(Link)`
     color: #f26a2e;
     transition: 0.3s ease-out;
   }
-`
+`;

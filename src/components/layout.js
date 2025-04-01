@@ -1,8 +1,8 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import Footer from "./Footer"
-import Header from "./header"
-import { GlobalStyle } from "./styles/GlobalStyles"
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import Footer from './Footer';
+import Header from './header';
+import { GlobalStyle } from './styles/GlobalStyles';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

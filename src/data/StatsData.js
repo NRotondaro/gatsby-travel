@@ -1,7 +1,7 @@
-import React from "react"
-import { GiEarthAmerica } from "react-icons/gi"
-import { MdAirplanemodeActive, MdTimer } from "react-icons/md"
-import { FaMoneyCheck } from "react-icons/fa"
+import React from 'react';
+import { GiEarthAmerica } from 'react-icons/gi';
+import { MdAirplanemodeActive, MdTimer } from 'react-icons/md';
+import { FaMoneyCheck } from 'react-icons/fa';
 
 const GiEarthAmericaIcon = () => {
   return (
@@ -10,8 +10,8 @@ const GiEarthAmericaIcon = () => {
         color: #047bf1;
       `}
     />
-  )
-}
+  );
+};
 
 const MdAirplanemodeActiveIcon = () => {
   return (
@@ -20,8 +20,8 @@ const MdAirplanemodeActiveIcon = () => {
         color: #f3a82e;
       `}
     />
-  )
-}
+  );
+};
 
 const MdTimerIcon = () => {
   return (
@@ -30,8 +30,8 @@ const MdTimerIcon = () => {
         color: #f34f2e;
       `}
     />
-  )
-}
+  );
+};
 const FaMoneyCheckIcon = () => {
   return (
     <FaMoneyCheck
@@ -39,28 +39,28 @@ const FaMoneyCheckIcon = () => {
         color: #3af576;
       `}
     />
-  )
-}
+  );
+};
 
 export const StatsData = [
   {
     icon: <GiEarthAmericaIcon />,
-    title: "Over 100 Destinations",
-    desc: "Travel to over 100 unique places",
+    title: 'Over 100 Destinations',
+    desc: 'Travel to over 100 unique places',
   },
   {
     icon: <MdAirplanemodeActiveIcon />,
-    title: "1 Million Trips Made",
-    desc: "Over 1 million trips completed last year",
+    title: '1 Million Trips Made',
+    desc: 'Over 1 million trips completed last year',
   },
   {
     icon: <MdTimerIcon />,
-    title: "Fastest Support",
-    desc: "Access our support team 24/7",
+    title: 'Fastest Support',
+    desc: 'Access our support team 24/7',
   },
   {
     icon: <FaMoneyCheckIcon />,
-    title: "Best Deals",
-    desc: "We offer the best prices",
+    title: 'Best Deals',
+    desc: 'We offer the best prices',
   },
-]
+];
