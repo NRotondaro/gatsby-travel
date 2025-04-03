@@ -9,13 +9,15 @@ This project is made using:
 - [Gatsby](https://www.gatsbyjs.com/)
 - [React](https://reactjs.org/)
 - [Styled Components](https://styled-components.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [GitHub Actions](https://github.com/features/actions)
 
 ## 🚀 Features
 
 - **Reusable Components**: Modular components like `Hero`, `Footer`, `Testimonials`, and `Trips`.
 - **Responsive Design**: Fully responsive layout for all devices.
 - **SEO Optimized**: Built-in SEO component for better search engine visibility.
-And more!
+- **Automated Deployment**: Continuous deployment to GitHub Pages using GitHub Actions.
 
 ## 🚀 How to run
 

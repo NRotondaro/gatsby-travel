@@ -1,13 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Travel Website`,
+    title: `Gatsby Travel`,
     description: `Travel website showcasing the best travel destinations and deals online.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    author: `Nikson Rotondaro`,
   },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,8 +24,6 @@ module.exports = {
         path: `${__dirname}/src/assets/videos`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,7 +38,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
